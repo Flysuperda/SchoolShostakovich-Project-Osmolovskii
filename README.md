@@ -19,3 +19,32 @@
 
 - +79633283695 -- Номер Телефона
 - @ANGETRETEN69 -- Телеграм
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+![photo_2025-12-05_19-02-19](https://github.com/user-attachments/assets/207f9661-f7db-4d4b-9cb8-386b1fdf587c)
