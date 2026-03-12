@@ -1,5 +1,5 @@
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 from config import SCHEDULES_DIR
 
 
@@ -11,9 +11,23 @@ WEEKDAY_NAMES = {
     4: "friday"
 }
 
+RUS_WEEKDAY_NAMES = {
+    "monday": "понедельник",
+    "tuesday": "вторник",
+    "wednesday": "среда",
+    "thursday": "четверг",
+    "friday": "пятница"
+}
+
 
 def get_today_weekday_name():
     weekday_number = datetime.now().weekday()
+    return WEEKDAY_NAMES.get(weekday_number)
+
+
+def get_tomorrow_weekday_name():
+    tomorrow = datetime.now() + timedelta(days=1)
+    weekday_number = tomorrow.weekday()
     return WEEKDAY_NAMES.get(weekday_number)
 
 
@@ -33,5 +47,31 @@ def get_schedule_path(class_name, weekday_name=None):
     return None
 
 
-def is_weekend():
-    return datetime.now().weekday() >= 5
+def is_weekend(date_obj=None):
+    if date_obj is None:
+        date_obj = datetime.now()
+    return date_obj.weekday() >= 5
+
+
+def get_current_date_string():
+    return datetime.now().strftime("%Y-%m-%d")
+
+
+def get_current_time_string():
+    return datetime.now().strftime("%H:%M")
+
+
+def is_valid_time_format(time_str):
+    try:
+        datetime.strptime(time_str, "%H:%M")
+        return True
+    except ValueError:
+        return False
+
+
+def normalize_time_string(time_str):
+    return datetime.strptime(time_str, "%H:%M").strftime("%H:%M")
+
+
+def weekday_name_to_russian(weekday_name):
+    return RUS_WEEKDAY_NAMES.get(weekday_name, weekday_name)
