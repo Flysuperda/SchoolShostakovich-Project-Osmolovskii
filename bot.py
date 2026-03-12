@@ -3,14 +3,17 @@ import time
 
 import telebot
 from telebot import types
-import schedule
+import schedule as schedule_lib
 
 from config import TOKEN, SEND_TIME, AVAILABLE_CLASSES
 from storage import save_user_class, get_user_class, get_all_users
 from schedule_utils import get_schedule_path, is_weekend
 
-bot = telebot.TeleBot(TOKEN)
+print("Импортирован модуль schedule:", schedule_lib)
+print("Путь к schedule:", getattr(schedule_lib, "__file__", "нет пути"))
+print("Есть ли every:", hasattr(schedule_lib, "every"))
 
+bot = telebot.TeleBot(TOKEN)
 
 def create_classes_keyboard():
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
@@ -143,12 +146,12 @@ def send_daily_schedule():
 
 
 def scheduler_loop():
-    schedule.every().day.at(SEND_TIME).do(send_daily_schedule)
+    schedule_lib.every().day.at(SEND_TIME).do(send_daily_schedule)
     print(f"Автоматическая рассылка запланирована на {SEND_TIME}")
 
     while True:
         try:
-            schedule.run_pending()
+            schedule_lib.run_pending()
             time.sleep(1)
         except Exception as error:
             print(f"Ошибка в планировщике: {error}")
