@@ -1,51 +1,11 @@
 {
-    "1546053725": {
-        "class_name": "9a",
-        "notification_time": "07:20",
-        "last_sent_date": null
-    },
-    "820647": {
-        "class_name": "9a",
-        "notification_time": "07:15",
-        "last_sent_date": null
-    },
-    "6633454115": {
-        "class_name": "9a",
-        "notification_time": null,
-        "last_sent_date": null
-    },
     "8050422880": {
-        "class_name": "9a",
-        "notification_time": "07:45",
-        "last_sent_date": null
-    },
-    "7905734119": {
-        "class_name": "9a",
+        "class_name": "9",
         "notification_time": null,
         "last_sent_date": null
     },
-    "6926802298": {
-        "class_name": "9a",
-        "notification_time": null,
-        "last_sent_date": null
-    },
-    "6128265206": {
-        "class_name": "9a",
-        "notification_time": null,
-        "last_sent_date": null
-    },
-    "7467069855": {
-        "class_name": "9b",
-        "notification_time": null,
-        "last_sent_date": null
-    },
-    "5695390608": {
-        "class_name": "9a",
-        "notification_time": null,
-        "last_sent_date": null
-    },
-    "1684407622": {
-        "class_name": "9a",
+    "1546053725": {
+        "class_name": "9",
         "notification_time": null,
         "last_sent_date": null
     }

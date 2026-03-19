@@ -8,12 +8,12 @@ CHECK_INTERVAL_SECONDS = 20
 
 AVAILABLE_CLASSES = [
     "5a", "5b",
-    "6a", "6b",
+    "6",
     "7a", "7b",
-    "8a", "8b",
-    "9a", "9b",
+    "8a",
+    "9",
     "10a", "10b",
-    "11a", "11b"
+    "11"
 ]
 
 SCHEDULES_DIR = "schedules"
